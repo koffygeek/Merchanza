@@ -1,3 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header.jsx";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!GKY</h1>;
+  return (
+    <main className="text-tertiary">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route />
+        </Routes>
+      </BrowserRouter>
+    </main>
+  );
 }
