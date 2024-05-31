@@ -52,6 +52,7 @@ const Header = () => {
                 onClick={toggleMenu}
               />
             )}
+<<<<<<< HEAD
             <div className="flexBetween sm:gap-x-6">
               <NavLink to={"/"} className={"flex"}>
                 <RiShoppingCart2Line className="p-2 h-10 w-10 hover:text-secondary" />
@@ -67,6 +68,11 @@ const Header = () => {
               >
                 <img src={user} alt="" height={19} width={19} />
                 Login
+=======
+            <div>
+              <NavLink to={"/"} className={"flex"}>
+                <RiShoppingCart2Line />
+>>>>>>> 7668675d5b507a689b5cbb66c12fe8931f06aab7
               </NavLink>
             </div>
           </div>
