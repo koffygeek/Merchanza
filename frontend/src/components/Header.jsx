@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import images / svgs
+import Navbar from "./Navbar";
+// import images / icons svgs
 import logo from "../assets/logo.png";
 import user from "../assets/user.svg";
-import Navbar from "./Navbar";
 import { MdMenu, MdClose } from "react-icons/md";
 
 const Header = () => {
@@ -39,7 +39,19 @@ const Header = () => {
             </div>
           </div>
           {/* {buttons} */}
-          <div>{!menuOpened ? <MdMenu /> : <MdClose />}</div>
+          <div>
+            {!menuOpened ? (
+              <MdMenu
+                className="xl:hidden cursor-pointer text-3xl hover:text-secondary"
+                onClick={toggleMenu}
+              />
+            ) : (
+              <MdClose
+                className="xl:hidden cursor-pointer text-3xl hover:text-secondary"
+                onClick={toggleMenu}
+              />
+            )}
+          </div>
         </div>
       </div>
     </header>
