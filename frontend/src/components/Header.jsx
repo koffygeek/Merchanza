@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import user from "../assets/user.svg";
 import Navbar from "./Navbar";
+import { MdMenu, MdClose } from "react-icons/md";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
+  const toggleMenu = () => setMenuOpened(!menuOpened);
 
   return (
     <header className="max-padd-container w-full z-50">
@@ -37,7 +39,7 @@ const Header = () => {
             </div>
           </div>
           {/* {buttons} */}
-          <div>buttons</div>
+          <div>{!menuOpened ? <MdMenu /> : <MdClose />}</div>
         </div>
       </div>
     </header>
