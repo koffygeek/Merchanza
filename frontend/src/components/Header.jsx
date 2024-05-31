@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 // import images / icons svgs
 import logo from "../assets/logo.png";
 import user from "../assets/user.svg";
 import { MdMenu, MdClose } from "react-icons/md";
+import { RiShoppingCart2Line } from "react-icons/ri";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -51,6 +52,23 @@ const Header = () => {
                 onClick={toggleMenu}
               />
             )}
+            <div className="flexBetween sm:gap-x-6">
+              <NavLink to={"/"} className={"flex"}>
+                <RiShoppingCart2Line className="p-2 h-10 w-10 hover:text-secondary" />
+                <span className="relative flexCenter w-5 h-5 rounded-full bg-secondary text-primary medium-14 -top-2 right-3">
+                  {"0"}
+                </span>
+              </NavLink>
+              <NavLink
+                to={"/"}
+                className={
+                  "btn-secondary flexCenter gap-x-2 medium-16 rounded-xl"
+                }
+              >
+                <img src={user} alt="" height={19} width={19} />
+                Login
+              </NavLink>
+            </div>
           </div>
         </div>
       </div>
