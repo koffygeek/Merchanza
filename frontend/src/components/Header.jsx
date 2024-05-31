@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 // import images / icons svgs
 import logo from "../assets/logo.png";
 import user from "../assets/user.svg";
 import { MdMenu, MdClose } from "react-icons/md";
+import { RiShoppingCart2Line } from "react-icons/ri";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -51,6 +52,11 @@ const Header = () => {
                 onClick={toggleMenu}
               />
             )}
+            <div>
+              <NavLink to={"/"} className={"flex"}>
+                <RiShoppingCart2Line />
+              </NavLink>
+            </div>
           </div>
         </div>
       </div>
