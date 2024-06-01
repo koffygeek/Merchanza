@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 // import images / icons svgs
@@ -10,6 +10,22 @@ import { RiShoppingCart2Line } from "react-icons/ri";
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const toggleMenu = () => setMenuOpened(!menuOpened);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        // close them menu if open when scrolling occurs
+        if (menuOpened) {
+          setMenuOpened(false);
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    // clean up the event listener when component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [menuOpened]); // Dependency array ensures that the effect runs when menuOpened changes
 
   return (
     <header className="max-padd-container w-full z-50">
@@ -52,7 +68,6 @@ const Header = () => {
                 onClick={toggleMenu}
               />
             )}
-<<<<<<< HEAD
             <div className="flexBetween sm:gap-x-6">
               <NavLink to={"/"} className={"flex"}>
                 <RiShoppingCart2Line className="p-2 h-10 w-10 hover:text-secondary" />
@@ -68,11 +83,6 @@ const Header = () => {
               >
                 <img src={user} alt="" height={19} width={19} />
                 Login
-=======
-            <div>
-              <NavLink to={"/"} className={"flex"}>
-                <RiShoppingCart2Line />
->>>>>>> 7668675d5b507a689b5cbb66c12fe8931f06aab7
               </NavLink>
             </div>
           </div>
