@@ -1,7 +1,11 @@
 import React from "react";
 
 const Home = () => {
-  return <div className="h-[2222px]">Home</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default Home;
