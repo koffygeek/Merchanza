@@ -32,19 +32,30 @@ const RelatedProducts = () => {
         >
           {LATEST.map((item, i) => (
             <SwiperSlide key={i}>
-              <Link to={""}>
-                <img src={item.image} alt="" />
-                <div>
-                  <h4>{item.name}</h4>
-                  <p>
+              <Link
+                to={""}
+                className="flexCenter gap-x-5 bg-white backdrop-blur-md p-4 rounded-xl"
+              >
+                <img
+                  src={item.image}
+                  height={77}
+                  width={77}
+                  className="rounded-lg drop-shadow-xl"
+                />
+                <div className="flex flex-col gap-y-1">
+                  <h4 className="line-clamp-1 medium-16">{item.name}</h4>
+                  <p className="line-clamp-1">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   </p>
-                  <div>
-                    <div>
+                  <div className="flexBetween">
+                    <div className="flexBetween gap-x-2 medium-16">
                       <span>${item.new_price}.00</span>
-                      <span> ${item.old_price}.00</span>
+                      <span className="line-through text-secondary">
+                        {" "}
+                        ${item.old_price}.00
+                      </span>
                     </div>
-                    <RiShoppingCart2Line />
+                    <RiShoppingCart2Line className="text-xl hover:text-secondary" />
                   </div>
                 </div>
               </Link>
