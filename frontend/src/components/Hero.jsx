@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
           {/* {New collections} */}
         </div>
-        <div>
+        <div className="mt-16">
           <RelatedProducts />
         </div>
       </div>
