@@ -33,12 +33,40 @@ const About = () => {
                 </p>
               </div>
             </div>
+            <div className="flexCenter gap-x-4">
+              <div className="h-16 min-w-16 bg-secondary flexCenter rounded-md">
+                <TbTruckReturn className="text-white text-2xl" />
+              </div>
+              <div>
+                <h4 className="medium-18">Secure Payment Options</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
+                  assumenda facere recusandae maiores voluptatibus ratione hic.
+                  Officia, sit totam? Quas, deleniti saepe qui voluptas quaerat
+                  dolores vitae repudiandae inventore recusandae?
+                </p>
+              </div>
+            </div>
+            <div className="flexCenter gap-x-4">
+              <div className="h-16 min-w-16 bg-secondary flexCenter rounded-md">
+                <TbTruckReturn className="text-white text-2xl" />
+              </div>
+              <div>
+                <h4 className="medium-18">Live Customer Support</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
+                  assumenda facere recusandae maiores voluptatibus ratione hic.
+                  Officia, sit totam? Quas, deleniti saepe qui voluptas quaerat
+                  dolores vitae repudiandae inventore recusandae?
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         {/* {right} */}
-        <div>
+        <div className="flex-1 flexCenter">
           <div>
-            <img src={about} alt="about" />
+            <img src={about} alt="about" height={488} width={488} />
           </div>
         </div>
       </div>
