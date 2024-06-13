@@ -30,13 +30,13 @@ const RelatedProducts = () => {
               spaceBetween: 30,
             },
           }}
-          className="h-[422px] sm:h-[477px] mt-5"
+          className="h-[188px] sm:h-[477px] mt-5"
         >
           {LATEST.map((item, i) => (
             <SwiperSlide key={i}>
               <Link
                 to={""}
-                className="flexCenter gap-x-5 bg-white backdrop-blur-md p-4 rounded-xl"
+                className="flexCenter gap-x-5 bg-white p-4 rounded-xl"
               >
                 <img
                   src={item.image}
