@@ -6,15 +6,15 @@ const Product = () => {
   const { ProductId } = useParams();
   console.log("ProductId:", ProductId);
 
-  const Product = all_products.find((e) => e.id === Number(ProductId));
-  if (!Product) {
+  const product = all_products.find((e) => e.id === Number(ProductId));
+  if (!product) {
     return <div>Product Not Found</div>;
   }
   // or redirect user to 404 page
   return (
     <section>
       <div>
-        <ProductHd />
+        <ProductHd product={product} />
       </div>
     </section>
   );
