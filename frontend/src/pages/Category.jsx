@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Category = ({ banner, category }) => {
   return (
-    <section max-padd-container bg-primary>
+    <section className="max-padd-container bg-primary">
       <div>
         <div className="pt-6">
           <img src={banner} alt="" className="block mb-7 mx-auto" />

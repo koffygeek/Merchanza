@@ -1,4 +1,3 @@
-import React from "react";
 import POPULAR from "../assets/popular";
 import Item from "./Item";
 

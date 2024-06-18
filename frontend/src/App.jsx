@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header.jsx";
-import Home from "./pages/Home.jsx";
-import Category from "./pages/Category.jsx";
-import Product from "./pages/Product.jsx";
-import Footer from "./components/Footer.jsx";
+import Home from "./pages/Home";
+import Category from "./pages/Category";
+import Product from "./pages/Product";
+import Footer from "./components/Footer";
 import clothingbanner from "./assets/clothingbanner.png";
-import cosmeticsbanner from "./assets/cosmeticsbanner.png";
 import electronicsbanner from "./assets/electronicsbanner.png";
+import cosmeticsbanner from "./assets/cosmeticsbanner.png";
 
 export default function App() {
   return (
@@ -31,8 +31,10 @@ export default function App() {
               <Category category={"electronics"} banner={electronicsbanner} />
             }
           />
-          <Route path="/product" element={<Product />} />
-          <Route path=":productId" element={<Product />}></Route>
+          <Route path="/product" element={<Product />}>
+            <Route path="/product/:ProductId" element={<Product />} />
+            {/* bug resolved */}
+          </Route>
           {/* <Route path="/cart-page" element={<Cart />} />
           <Route path="/login" element={<Login />} /> */}
         </Routes>
