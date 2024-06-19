@@ -7,10 +7,10 @@ const ProductDescription = () => {
         <button className="btn-dark rounded-sm !text-xs !py-[6px] w-36">
           Description
         </button>
-        <button className="btn-dark rounded-sm !text-xs !py-[6px] w-36">
+        <button className="btn-dark-outline rounded-sm !text-xs !py-[6px] w-36">
           Care Guide
         </button>
-        <button className="btn-dark rounded-sm !text-xs !py-[6px] w-36">
+        <button className="btn-dark-outline rounded-sm !text-xs !py-[6px] w-36">
           Size Guide
         </button>
       </div>

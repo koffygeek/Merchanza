@@ -57,7 +57,7 @@ const Header = () => {
           </div>
 
           {/* {buttons} */}
-          <div>
+          <div className="flexBetween gap-x-3 sm:gap-x-2 bold-16">
             {!menuOpened ? (
               <MdMenu
                 className="xl:hidden cursor-pointer text-3xl hover:text-secondary"
