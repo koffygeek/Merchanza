@@ -1,6 +1,9 @@
 import { useParams } from "react-router-dom";
 import ProductHd from "../components/ProductHd";
 import all_products from "../assets/all_products";
+import PopularProducts from "../components/PopularProducts";
+import ProductDescription from "../components/ProductDescription";
+import ProductDisplay from "../components/ProductDisplay";
 
 const Product = () => {
   const { ProductId } = useParams();
@@ -15,6 +18,9 @@ const Product = () => {
     <section>
       <div>
         <ProductHd product={product} />
+        <ProductDisplay product={product} />
+        <ProductDescription />
+        <PopularProducts />
       </div>
     </section>
   );
