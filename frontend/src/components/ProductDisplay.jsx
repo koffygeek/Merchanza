@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaHeart, FaStar } from "react-icons/fa6";
+import { ShopContext } from "../context/ShopContext";
 
 const ProductDisplay = (props) => {
   const { product } = props;
+  const { addToCart } = useContext(ShopContext);
 
   return (
     <section className="max-padd-container flex flex-col gap-8 xl:flex-row bg-primary py-4">
@@ -55,49 +57,59 @@ const ProductDisplay = (props) => {
             ${product.old_price}.00
           </div>
         </div>
-        <div>
-          {/* product colors, icons buttons */}
-          <div>
-            <h4 className="bold-16">Select Color:</h4>
-            <div className="flex gap-3 my-3">
-              <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-full bg-secondaryRed "></div>
-              <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-full bg-secondaryYellow "></div>
-              <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-full bg-secondaryBlue "></div>
-              <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-full bg-secondaryGreen "></div>
-            </div>
-          </div>
-          <div>
-            <h4 className="bold-16">Select Size:</h4>
-            <div className="flex gap-3 my-3">
-              <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-md  ">
-                S
-              </div>
-              <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-md ">
-                M
-              </div>
-              <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-md ">
-                L
-              </div>
-              <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-md  ">
-                XL
+
+        {/* product colors, icons buttons */}
+        <div className="flex flex-col gap-x-6">
+          <div className="flex flex-col sm:flex-row gap-x-10 gap-y-3 my-6">
+            <div>
+              <h4 className="bold-16">Select Color:</h4>
+              <div className="flex gap-3 my-3">
+                <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-full bg-secondaryRed "></div>
+                <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-full bg-secondaryYellow "></div>
+                <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-full bg-secondaryBlue "></div>
+                <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-full bg-secondaryGreen "></div>
               </div>
             </div>
+            <div>
+              <h4 className="bold-16">Select Size:</h4>
+              <div className="flex gap-3 my-3">
+                <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-md  ">
+                  S
+                </div>
+                <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-md ">
+                  M
+                </div>
+                <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-md ">
+                  L
+                </div>
+                <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer rounded-md  ">
+                  XL
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex gap-3 mb-8 max-w-[555px]">
-            <button className="btn-dark rounded-md">Add To Cart</button>
-            <button className="btn-secondary rounded-md !px-4">
-              <FaHeart />
-            </button>
-          </div>
-          <p>
-            <span className="medium-16 text-tertiary ">Category : </span> Women
-            | Jacket | Winter
-          </p>
-          <p>
-            <span className="medium-16 text-tertiary ">Tags : </span> Modern |
-            New Arrivals{" "}
-          </p>
         </div>
+        <div className="flex gap-3 mb-8 max-w-[555px]">
+          <button
+            onClick={() => {
+              addToCart(product.id);
+            }}
+            className="btn-dark rounded-md"
+          >
+            Add To Cart
+          </button>
+          <button className="btn-secondary rounded-md !px-4">
+            <FaHeart />
+          </button>
+        </div>
+        <p>
+          <span className="medium-16 text-tertiary ">Category : </span> Women |
+          Jacket | Winter
+        </p>
+        <p>
+          <span className="medium-16 text-tertiary ">Tags : </span> Modern | New
+          Arrivals{" "}
+        </p>
       </div>
     </section>
   );
