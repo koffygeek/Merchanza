@@ -33,7 +33,7 @@ const Header = () => {
         {/* {logo} */}
         <Link to={"/"} className="flex items-center gap-x-2">
           <img src={logo} alt="logoImg" height={31} width={31} />
-          <span className="bold-24 hidden xs:flex">Merchanza</span>
+          <span className="bold-24 hidden xs:flex">GrébéMarket</span>
         </Link>
         {/* {Navbar and buttons} */}
         <div className="flexCenter gap-x-4">
