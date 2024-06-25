@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 // import images / icons svgs
@@ -6,10 +6,12 @@ import logo from "../assets/logo.png";
 import user from "../assets/user.svg";
 import { MdMenu, MdClose } from "react-icons/md";
 import { RiShoppingCart2Line } from "react-icons/ri";
+import { ShopContext } from "../context/ShopContext";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const toggleMenu = () => setMenuOpened(!menuOpened);
+  const { getTotalCartItems } = useContext(ShopContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,7 +75,7 @@ const Header = () => {
               <NavLink to={"/cart-page"} className={"flex"}>
                 <RiShoppingCart2Line className="p-2 h-10 w-10 hover:text-secondary" />
                 <span className="relative flexCenter w-5 h-5 rounded-full bg-secondary text-primary medium-14 -top-2 right-3">
-                  {"0"}
+                  {getTotalCartItems()}
                 </span>
               </NavLink>
               <NavLink
