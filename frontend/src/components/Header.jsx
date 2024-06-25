@@ -70,7 +70,7 @@ const Header = () => {
               />
             )}
             <div className="flexBetween sm:gap-x-6">
-              <NavLink to={"/"} className={"flex"}>
+              <NavLink to={"/cart-page"} className={"flex"}>
                 <RiShoppingCart2Line className="p-2 h-10 w-10 hover:text-secondary" />
                 <span className="relative flexCenter w-5 h-5 rounded-full bg-secondary text-primary medium-14 -top-2 right-3">
                   {"0"}
