@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 // import images / icons svgs
@@ -35,7 +35,7 @@ const Header = () => {
         {/* {logo} */}
         <Link to={"/"} className="flex items-center gap-x-2">
           <img src={logo} alt="logoImg" height={31} width={31} />
-          <span className="bold-24 hidden xs:flex">GrébéMarket</span>
+          <span className="bold-24 hidden xs:flex">GrébéYvanMarket</span>
         </Link>
         {/* {Navbar and buttons} */}
         <div className="flexCenter gap-x-4">
