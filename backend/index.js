@@ -116,6 +116,8 @@ app.post("/removeproduct", async (req, res) => {
   });
 });
 
+// Creating API for getting all products
+
 app.listen(port, (error) => {
   if (!error) {
     console.log("Server is running on Port:  " + port);
