@@ -96,6 +96,8 @@ const AddProduct = () => {
       <div className="mb-3 flex items-center gap-x-4">
         <h4>Product Category</h4>
         <select
+          value={productDetails.category}
+          onChange={changeHandler}
           name="category"
           id=""
           className="bg-primary ring-1 ring-slate-900/20 medium-16 rounded-sm outline-none"

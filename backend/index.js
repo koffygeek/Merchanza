@@ -6,6 +6,7 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const cors = require("cors");
 const path = require("path");
+const { type } = require("os");
 // const { log } = require("console");
 
 app.use(express.json());
@@ -54,6 +55,14 @@ const Product = mongoose.model("Product", {
     required: true,
   },
   name: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
+  category: {
     type: String,
     required: true,
   },
@@ -122,6 +131,29 @@ app.get("/allproducts", async (req, res) => {
   console.log("All products fetched");
   res.send(products);
 });
+
+// Schema Creating for User Model
+const User = mongoose.model("User", {
+  name: {
+    type: String,
+  },
+  email: {
+    type: String,
+    unique: true,
+  },
+  password: {
+    type: String,
+  },
+  cartData: {
+    type: Object,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+// Creating endpoint for registering user
 
 app.listen(port, (error) => {
   if (!error) {
