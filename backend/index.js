@@ -183,6 +183,27 @@ app.post("/signup", async (req, res) => {
   res.json({ success: true, token });
 });
 
+// Creating endpoint for user login
+app.post("/login", async (req, res) => {
+  let user = await User.findOne({ email: req.body.email });
+  if (user) {
+    const passMatch = req.body.password === user.password;
+    if (passMatch) {
+      const data = {
+        user: {
+          id: user.id,
+        },
+      };
+      const token = jwt.sign(data, "secret_ecom");
+      res.json({ success: true, token });
+    } else {
+      res.json({ success: false, errors: "Wrong Password" });
+    }
+  } else {
+    res.json({ success: false, errors: "Wrong Email address" });
+  }
+});
+
 app.listen(port, (error) => {
   if (!error) {
     console.log("Server is running on Port:  " + port);
