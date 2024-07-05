@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 // import images / icons svgs
 import logo from "../assets/logo.png";
 import user from "../assets/user.svg";
+import logout from "../assets/logout.svg";
 import { MdMenu, MdClose } from "react-icons/md";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { ShopContext } from "../context/ShopContext";
@@ -78,15 +79,31 @@ const Header = () => {
                   {getTotalCartItems()}
                 </span>
               </NavLink>
-              <NavLink
-                to={"/login"}
-                className={
-                  "btn-secondary flexCenter gap-x-2 medium-16 rounded-xl"
-                }
-              >
-                <img src={user} alt="" height={19} width={19} />
-                Login
-              </NavLink>
+              {localStorage.getItem("auth-token") ? (
+                <NavLink
+                  onClick={() => {
+                    localStorage.removeItem("auth-token");
+                    window.location.replace("/");
+                  }}
+                  to={"/logout"}
+                  className={
+                    "btn-secondary flexCenter gap-x-2 medium-16 rounded-xl"
+                  }
+                >
+                  <img src={logout} alt="" height={19} width={19} />
+                  Logout
+                </NavLink>
+              ) : (
+                <NavLink
+                  to={"/login"}
+                  className={
+                    "btn-secondary flexCenter gap-x-2 medium-16 rounded-xl"
+                  }
+                >
+                  <img src={user} alt="" height={19} width={19} />
+                  Login
+                </NavLink>
+              )}
             </div>
           </div>
         </div>
