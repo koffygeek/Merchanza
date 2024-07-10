@@ -233,8 +233,13 @@ const fetchUser = async (req, res, next) => {
 };
 
 // Creating endpoint for adding products in cartData
-app.post("/addtocart", async (req, res) => {
-  console.log(req.body);
+app.post("/addtocart", fetchUser, async (req, res) => {
+  console.log(req.body, req.user);
+  let userData = await User.findOne({ _id: req.user.id });
+  userData.cartData[req.body.itemId] += 1;
+  await User.findOneAndUpdate({ _id: req.user.id }),
+    { cartData: userData.cartData };
+  res.send("Added");
 });
 
 app.listen(port, (error) => {
