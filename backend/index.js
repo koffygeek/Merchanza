@@ -66,10 +66,6 @@ const Product = mongoose.model("Product", {
     type: String,
     required: true,
   },
-  image: {
-    type: String,
-    required: true,
-  },
   new_price: {
     type: Number,
     required: true,
@@ -202,6 +198,22 @@ app.post("/login", async (req, res) => {
   } else {
     res.json({ success: false, errors: "Wrong Email address" });
   }
+});
+
+// Creating endpoint for new collection data
+app.get("/newcollections", async (req, res) => {
+  let products = await Product.find({});
+  let newcollection = products.slice(1).slice(-8);
+  console.log("NewCollection fetched");
+  res.send(newcollection);
+});
+
+// creating endpoint for popularproducts in clothing
+app.get("/popularproducts", async (req, res) => {
+  let products = await Product.find({ category: "clothing" });
+  let popularproducts = products.slice(0, 4);
+  console.log("Popularproducts Fetched");
+  res.send(popularproducts);
 });
 
 app.listen(port, (error) => {

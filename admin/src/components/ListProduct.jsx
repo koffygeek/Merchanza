@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { TbTrash } from "react-icons/tb";
 
 const ListProduct = () => {
-  const [allproducts, setallproducts] = useState([]);
+  const [allproducts, setAllproducts] = useState([]);
 
   const fetchInfo = async () => {
     await fetch("http://localhost:4000/allproducts")
       .then((res) => res.json())
       .then((data) => {
-        setallproducts(data);
+        setAllproducts(data);
       });
   };
 
