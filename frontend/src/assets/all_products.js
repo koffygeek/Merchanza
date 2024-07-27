@@ -38,7 +38,7 @@ import p36_img from "./product_36.png";
 let all_products = [
   {
     id: 1,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Pure Garment Dyed Cotton Shirt",
     category: "clothing",
     image: p1_img,
     new_price: 50,
@@ -46,7 +46,7 @@ let all_products = [
   },
   {
     id: 2,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Trekker Camo Safari Expedition Explorer Sneakers",
     category: "clothing",
     image: p2_img,
     new_price: 85,
@@ -54,7 +54,7 @@ let all_products = [
   },
   {
     id: 3,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Trekker Camo Safari Expedition Explorer Shirt",
     category: "clothing",
     image: p3_img,
     new_price: 60,
@@ -62,7 +62,7 @@ let all_products = [
   },
   {
     id: 4,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Expedition Denim Adventure Discover",
     category: "clothing",
     image: p4_img,
     new_price: 100,
@@ -70,7 +70,7 @@ let all_products = [
   },
   {
     id: 5,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Safari Tracker Exploration Navigator Boots",
     category: "clothing",
     image: p5_img,
     new_price: 85,
@@ -78,7 +78,7 @@ let all_products = [
   },
   {
     id: 6,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Wilderness Explorer Journey Seeker Shirt",
     category: "clothing",
     image: p6_img,
     new_price: 85,
@@ -86,7 +86,7 @@ let all_products = [
   },
   {
     id: 7,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Heels Wilderness Explorer Journey Seeker",
     category: "clothing",
     image: p7_img,
     new_price: 85,
@@ -94,7 +94,7 @@ let all_products = [
   },
   {
     id: 8,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "GARAMOND Homme Chaussures Formelles a Lacets - Marron",
     category: "clothing",
     image: p8_img,
     new_price: 85,
@@ -134,11 +134,11 @@ let all_products = [
   },
   {
     id: 13,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Smart Bracelet D20 montre intelligente pour femmes et hommes Bracelet de fitness",
     category: "electronics",
     image: p13_img,
-    new_price: 85,
-    old_price: 120,
+    new_price: 66,
+    old_price: 77,
   },
   {
     id: 14,
@@ -198,11 +198,11 @@ let all_products = [
   },
   {
     id: 21,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "SODO Casque Bluetooth V5.0 sans fil avec Micro",
     category: "electronics",
     image: p21_img,
-    new_price: 85,
-    old_price: 120,
+    new_price: 120,
+    old_price: 220,
   },
   {
     id: 22,

@@ -1,4 +1,4 @@
-// latest 
+// latest
 import p21_img from "./product_21.png";
 import p6_img from "./product_6.png";
 import p7_img from "./product_7.png";
@@ -11,10 +11,10 @@ import p12_img from "./product_12.png";
 const LATEST = [
   {
     id: 21,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "SODO Casque Bluetooth V5.0 sans fil avec Micro",
     image: p21_img,
-    new_price: 50,
-    old_price: 80,
+    new_price: 120,
+    old_price: 220,
   },
   {
     id: 6,

@@ -1,4 +1,3 @@
-import React from "react";
 import LATEST from "../assets/latest";
 import { Link } from "react-router-dom";
 // import Swiper React components

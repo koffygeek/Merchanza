@@ -6,7 +6,7 @@ import p4_img from "./product_4.png";
 const POPULAR = [
   {
     id: 1,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Pure Garment Dyed Cotton Shirt",
     image: p1_img,
     new_price: 50,
     old_price: 80,
